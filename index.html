@@ -1,2 +1,27 @@
-<h1>Hello!</h1>
-<p>Testing repository upload from PC.</p>
+<html>
+<body>
+
+<form id="frm1" action="/action_page.php">
+  one number <input type="text" name="fname" value="Donald"><br>
+  another number <input type="text" name="lname" value="Duck"><br><br>
+</form> 
+
+<button onclick="myFunction()">Calculate it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.forms["frm1"];
+    var num1=Number(x.elements[0].value);
+    var num2=Number(x.elements[1].value);
+    var text2=0;
+    text2 = num1+num2;
+    var text = " ";
+        text = x.elements[0].value + x.elements[1].value;
+    document.getElementById("demo").innerHTML = text2;
+}
+</script>
+
+</body>
+</html>
