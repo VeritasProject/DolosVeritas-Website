@@ -1,26 +1,25 @@
-<html>
+<!DOCTYPE html><html>
 <body>
 
-<form id="frm1" action="/action_page.php">
-  one number <input type="text" name="fname" value="Donald"><br>
-  another number <input type="text" name="lname" value="Duck"><br><br>
-</form> 
+<form id="frm1" >
+    Enter the sentence <input type="text" name="fname" value=" "><br>
+</form>
 
-<button onclick="myFunction()">Calculate it</button>
+<button onclick="myFunction()">split it!</button>
 
-<p id="demo"></p>
 
 <script>
-function myFunction() {
-    var x = document.forms["frm1"];
-    var num1=Number(x.elements[0].value);
-    var num2=Number(x.elements[1].value);
-    var text2=0;
-    text2 = num1+num2;
-    var text = " ";
-        text = x.elements[0].value + x.elements[1].value;
-    document.getElementById("demo").innerHTML = text2;
-}
+    function myFunction() {
+        var x = document.forms["frm1"];
+        var sentence=document.getElementById("frml");
+        var sentence2=x.elements[0].value;
+        sentence2=sentence2.toLowerCase();
+        sentence2=sentence2.split(/[,_?. ]/);
+        for (var a=0;a <sentence2.length;a++){
+        document.writeln(sentence2[a]+"<br>");}
+
+
+    }
 </script>
 
 </body>
